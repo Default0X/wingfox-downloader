@@ -1,0 +1,62 @@
+name: Bug report
+description: Report a problem with Wingfox Downloader
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Do not include passwords, cookies, access tokens, or downloaded course files.
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Example: v1.0.0
+      placeholder: v1.0.0
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 10 / Windows 11
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem clearly.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Opened the app
+        2. Pasted course URL
+        3. Logged in
+        4. Error appeared
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot or console text
+      description: Paste non-sensitive error text or attach a screenshot.
+    validations:
+      required: false
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I did not include passwords, cookies, access tokens, or downloaded course files.
+          required: true
